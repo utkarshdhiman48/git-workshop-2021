@@ -1,0 +1,81 @@
+body{
+	margin: 0;
+	background-image: linear-gradient(45deg, #111, #444);
+	font-family: sans-serif;
+	color: #eee;
+}
+
+img{
+	max-width: 100%;
+}
+.bug-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+.bug-parent{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+.bug-web{
+	width: 4px;
+	height: 1000px;
+	background-color: #333;
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	transform: translateX(-50%);
+	animation-name: webMove;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.bug{
+	max-width: 80vw;
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation-name: bugMove;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.superCenter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+}
+
+
+@keyframes webMove{
+	0%{
+		bottom: 50%;
+	}
+	50%{
+		bottom: 30%;
+	}
+	100%{
+		bottom: 50%;
+	}
+}
+
+@keyframes bugMove{
+	0%{
+		top: 50%;
+	}
+	50%{
+		top: 70%;
+	}
+	100%{
+		top: 50%;
+	}
